@@ -1,0 +1,2223 @@
+/* --------------- reset.css --------------- */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  /* обнуляем отступы и убираем бордюры */
+  vertical-align: baseline;
+  /* приводим все к одной базовой линии */
+  background: transparent;
+  /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+  font-size: 14px;
+  /* размер шрифта всем одинаковый */
+}
+
+a {
+  /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none;
+}
+
+table {
+  /* устраняем отступы между ячейками таблицы */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+td img {
+  vertical-align: top;
+  /* возвращаем привычное вертикальное выравнивание */
+}
+
+input,
+select,
+button,
+textarea {
+  margin: 0;
+  /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+  font-size: 14px;
+  /* делаем размер шрифтов везде одинаковым */
+  outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: 0;
+  /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+  /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+  vertical-align: bottom;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+html {
+  min-height: 100%;
+  /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+  color: #000;
+  text-align: left;
+  font-size: 14px;
+  /* используем безопасные шрифтовые CSS стеки */
+  min-height: 100%;
+}
+
+a,
+a:visited {
+  /* порядок правил для ссылок имеет значение */
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: #000;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clr {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+
+.skdslider {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  top: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.skdslider .slide-navs {
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.skdslider .slide-navs li {
+  display: inline-block;
+  background: white;
+  height: 15px;
+  width: 15px;
+  margin: 0px 6px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.skdslider .slide-navs .current-slide {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.skdslider .slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skdslider .slides li {
+  display: none;
+  position: relative;
+}
+
+.skdslider .slides li img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .skdslider {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .skdslider {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .skdslider {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .skdslider {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .skdslider {
+    height: 250px;
+  }
+}
+
+/* Settings */
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/47.ttf");
+}
+
+* {
+  font-family: Roboto;
+  font-size: .875em;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+li {
+  color: #000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gif {
+  position: absolute;
+  z-index: -2;
+  top: 35%;
+  left: 44%;
+  -webkit-animation: fade-logo 3s ease;
+  animation: fade-logo 3s ease;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /*	-- Header	--  */
+}
+
+.header {
+  background: white;
+  padding: 10px 0;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header.sticky {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+/* Logo */
+
+.logo {
+  -webkit-box-flex: .1;
+  -ms-flex: .1;
+  flex: .1;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Navigation */
+
+.nav {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: .6;
+  -ms-flex: .6;
+  flex: .6;
+}
+
+.nav ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.nav li {
+  list-style: none;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.nav li a {
+  padding: 40px 0;
+}
+
+.nav li a:hover {
+  box-sizing: border-box;
+  border-bottom: 3px solid #CC3333;
+  color: #CC3333;
+}
+
+.nav li a:first-child {
+  margin-left: 0;
+}
+
+.nav label {
+  display: none;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav label:hover {
+  color: #000;
+  border: 1px solid #CC3333;
+}
+
+.nav input[type="checkbox"] {
+  display: none;
+}
+
+/* Contact */
+
+.contact {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: .17;
+  -ms-flex: .17;
+  flex: .17;
+}
+
+.contact p {
+  color: #000;
+}
+
+.contact .ic {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.contact .ic .ic-vk {
+  background: url("../img/icons/vk24w.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+}
+
+.contact .ic .ic-vk:hover {
+  background: url("../img/icons/vk24c.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.contact .ic .ic-inst {
+  background: url("../img/icons/inst24w.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 25px;
+  width: 25px;
+}
+
+.contact .ic .ic-inst:hover {
+  background: url("../img/icons/inst24c.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  /*  Slider  */
+  /* -- Slider -- */
+}
+
+.inSlider img {
+  z-index: -1;
+  position: relative;
+}
+
+.inSlider p {
+  color: #fff;
+  font-size: 36px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border: 1px solid #CC3333;
+}
+
+.inSlider .firstP {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+.inSlider .secondP {
+  position: absolute;
+  top: 450px;
+  left: 250px;
+}
+
+.inSlider .thirdP {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  /* -- Price -- */
+}
+
+.price_days {
+  background: #202125;
+  padding: 50px 0;
+}
+
+.price_days .wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.price_days .price {
+  -webkit-box-flex: .6;
+  -ms-flex: .6;
+  flex: .6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.price_days .price h3 {
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.price_days .price .prices {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #CC3333;
+  margin-top: 20px;
+}
+
+.price_days .price .prices p {
+  font-size: 24px;
+}
+
+.price_days .logo {
+  background: #fff;
+  -webkit-box-flex: .15;
+  -ms-flex: .15;
+  flex: .15;
+  border-radius: 53%;
+  padding: 5px 0 5px 10px;
+  margin-top: 150px;
+  margin-right: 50px;
+}
+
+.price_days .logo img {
+  width: 170px;
+  height: 170px;
+  /* -- Days -- */
+}
+
+.days {
+  background: url("../img/week.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 30px 0;
+}
+
+.days .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.days .wrapper > h3 {
+  -webkit-box-flex: .4;
+  -ms-flex: .4;
+  flex: .4;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #CC3333;
+}
+
+.days .wrapper .week {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-top: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.days .wrapper .week .day {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  border: 1px solid #CC3333;
+  width: 115px;
+  height: 115px;
+  -webkit-box-flex: .15;
+  -ms-flex: .15;
+  flex: .15;
+  margin-right: 25px;
+}
+
+.days .wrapper .week .day:last-child {
+  margin-right: 0;
+}
+
+.days .wrapper .week .day p {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin-top: 33px;
+}
+
+.days .wrapper .week .day p:last-child {
+  margin: 0;
+}
+
+.days .wrapper .week .weekend {
+  background: rgba(204, 51, 51, 0.6);
+}
+
+.days .wrapper .week .weekend p {
+  color: #fff;
+}
+
+/* Media Screens  */
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 1100px;
+  }
+
+  .nav li {
+    margin-left: 15px;
+  }
+
+  .contact {
+    -webkit-box-flex: .15;
+    -ms-flex: .15;
+    flex: .15;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+  }
+
+  .price_days .logo {
+    -webkit-box-flex: .13;
+    -ms-flex: .13;
+    flex: .13;
+    padding-left: 2px;
+    padding-top: 2px;
+    height: 145px;
+  }
+
+  .price_days .logo img {
+    width: 145px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .wrapper {
+    max-width: 900px;
+  }
+
+  .nav {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+  }
+
+  .nav ul li {
+    margin-left: 10px;
+  }
+
+  .inSlider p {
+    font-size: 30px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 200px;
+    left: 320px;
+  }
+
+  .price_days .price {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+  }
+
+  .price_days .price h3 {
+    font-size: 22px;
+  }
+
+  .price_days .price p {
+    font-size: 18px;
+  }
+
+  .price_days .logo {
+    -webkit-box-flex: .13;
+    -ms-flex: .13;
+    flex: .13;
+    height: 122px;
+  }
+
+  .price_days .logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .days .wrapper .week .day {
+    width: 110px;
+    height: 110px;
+  }
+
+  .days .wrapper .week .day p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .wrapper {
+    max-width: 800px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .wrapper .logo {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .wrapper .nav {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin: 10px 0;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .wrapper .contact {
+    display: none;
+  }
+
+  .inSlider p {
+    font-size: 26px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+  }
+
+  .price_days .price {
+    width: 100%;
+  }
+
+  .price_days .price .prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #CC3333;
+    margin-top: 20px;
+  }
+
+  .price_days .price .prices p {
+    font-size: 20px;
+  }
+
+  .price_days .logo {
+    display: none;
+  }
+
+  .days .wrapper .week .day {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+  }
+
+  .days .wrapper .week .day p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .wrapper {
+    max-width: 680px;
+  }
+
+  .nav {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .nav ul {
+    border: 1px solid #CC3333;
+  }
+
+  .nav ul li {
+    border-bottom: 1px solid #CC3333;
+    margin: 0;
+    width: 500px;
+  }
+
+  .nav ul li:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  .nav ul li:hover a {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  .nav label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .nav > ul {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: max-height 500ms, opacity 1000ms;
+    transition: max-height 500ms, opacity 1000ms;
+    background: #fff;
+  }
+
+  .nav input[type="checkbox"]:checked ~ label + ul {
+    max-height: 500px;
+    opacity: 1;
+    -webkit-transition: max-height 0, opacity 300ms;
+    transition: max-height 0, opacity 300ms;
+  }
+
+  .inSlider p {
+    font-size: 20px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+  }
+
+  .price_days .price .prices {
+    margin-top: 20px;
+  }
+
+  .price_days .price .prices p {
+    font-size: 16px;
+  }
+
+  .days .wrapper > h3 {
+    max-height: 65px;
+    margin-left: -25px;
+  }
+
+  .days .wrapper .week {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+
+  .days .wrapper .week .day {
+    width: 200px;
+    height: 75px;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+
+  .days .wrapper .week .day:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .wrapper {
+    max-width: 480px;
+  }
+
+  .nav ul li {
+    width: 350px;
+  }
+
+  .inSlider p {
+    font-size: 18px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 320px;
+  }
+
+  .nav ul li {
+    width: 300px;
+  }
+
+  .price_days .price {
+    width: 70%;
+  }
+
+  .price_days .price .prices {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+}
+
+.cd-auto-hide-header {
+  position: fixed;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  will-change: transform;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.cd-auto-hide-header::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.cd-auto-hide-header.is-hidden {
+  -webkit-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+
+.gif {
+  position: fixed;
+  z-index: -2;
+  top: 50%;
+  left: 50%;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+@-webkit-keyframes fade-logo {
+  0% {
+    opacity: .3;
+  }
+
+  25% {
+    opacity: .8;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  75% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade-logo {
+  0% {
+    opacity: .3;
+  }
+
+  25% {
+    opacity: .8;
+  }
+
+  50% {
+    opacity: .3;
+  }
+
+  75% {
+    opacity: .8;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.load {
+  z-index: 20;
+  -webkit-animation: fade-in 5s ease;
+  animation: fade-in 5s ease;
+}
+/* Settings */
+
+@font-face {
+  font-family: Roboto;
+  src: url("../fonts/47.ttf");
+}
+
+* {
+  font-family: Roboto;
+  font-size: .875em;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+li {
+  color: #000;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.gif {
+  position: absolute;
+  z-index: -2;
+  top: 35%;
+  left: 44%;
+  -webkit-animation: fade-logo 3s ease;
+  animation: fade-logo 3s ease;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  /*	-- Header	--  */
+}
+
+.header {
+  background: white;
+  padding: 10px 0;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  width: 100%;
+  z-index: 10000;
+}
+
+.header.sticky {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.8);
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+/* Logo */
+
+.logo {
+  -webkit-box-flex: .1;
+  -ms-flex: .1;
+  flex: .1;
+}
+
+.logo img {
+  width: 80px;
+  height: 80px;
+}
+
+/* Navigation */
+
+.nav {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: .6;
+  -ms-flex: .6;
+  flex: .6;
+}
+
+.nav ul {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.nav li {
+  list-style: none;
+  text-transform: uppercase;
+  margin-left: 25px;
+}
+
+.nav li a {
+  padding: 40px 0;
+}
+
+.nav li a:hover {
+  box-sizing: border-box;
+  border-bottom: 3px solid #CC3333;
+  color: #CC3333;
+}
+
+.nav li a:first-child {
+  margin-left: 0;
+}
+
+.nav label {
+  display: none;
+  border: 1px solid #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav label:hover {
+  color: #000;
+  border: 1px solid #CC3333;
+}
+
+.nav input[type="checkbox"] {
+  display: none;
+}
+
+/* Contact */
+
+.contact {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex: .17;
+  -ms-flex: .17;
+  flex: .17;
+}
+
+.contact p {
+  color: #000;
+}
+
+.contact .ic {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.contact .ic .ic-vk {
+  background: url("../img/icons/vk24w.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 25px;
+  width: 25px;
+  margin-right: 20px;
+}
+
+.contact .ic .ic-vk:hover {
+  background: url("../img/icons/vk24c.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.contact .ic .ic-inst {
+  background: url("../img/icons/inst24w.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  height: 25px;
+  width: 25px;
+}
+
+.contact .ic .ic-inst:hover {
+  background: url("../img/icons/inst24c.png") 0 0 no-repeat;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  /*  Slider  */
+  /* -- Slider -- */
+}
+
+.inSlider img {
+  z-index: -1;
+  position: relative;
+}
+
+.inSlider p {
+  color: #fff;
+  font-size: 36px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+  border: 1px solid #CC3333;
+}
+
+.inSlider .firstP {
+  position: absolute;
+  top: 200px;
+  left: 400px;
+}
+
+.inSlider .secondP {
+  position: absolute;
+  top: 450px;
+  left: 250px;
+}
+
+.inSlider .thirdP {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  /* -- Price -- */
+}
+
+.price_days {
+  background: #202125;
+  padding: 50px 0;
+}
+
+.price_days .wrapper {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  color: #fff;
+}
+
+.price_days .price {
+  -webkit-box-flex: .6;
+  -ms-flex: .6;
+  flex: .6;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column wrap;
+  flex-flow: column wrap;
+}
+
+.price_days .price h3 {
+  font-size: 30px;
+  margin: 0 auto;
+}
+
+.price_days .price .prices {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-bottom: 1px solid #CC3333;
+  margin-top: 20px;
+}
+
+.price_days .price .prices p {
+  font-size: 24px;
+}
+
+.price_days .logo {
+  background: #fff;
+  -webkit-box-flex: .15;
+  -ms-flex: .15;
+  flex: .15;
+  border-radius: 53%;
+  padding: 5px 0 5px 10px;
+  margin-top: 150px;
+  margin-right: 50px;
+}
+
+.price_days .logo img {
+  width: 170px;
+  height: 170px;
+  /* -- Days -- */
+}
+
+.days {
+  background: url("../img/week.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 30px 0;
+}
+
+.days .wrapper {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.days .wrapper > h3 {
+  -webkit-box-flex: .4;
+  -ms-flex: .4;
+  flex: .4;
+  text-align: center;
+  font-size: 30px;
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.6);
+  border: 1px solid #CC3333;
+}
+
+.days .wrapper .week {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-top: 30px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+.days .wrapper .week .day {
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  border: 1px solid #CC3333;
+  width: 115px;
+  height: 115px;
+  -webkit-box-flex: .15;
+  -ms-flex: .15;
+  flex: .15;
+  margin-right: 25px;
+}
+
+.days .wrapper .week .day:last-child {
+  margin-right: 0;
+}
+
+.days .wrapper .week .day p {
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+  margin-top: 33px;
+}
+
+.days .wrapper .week .day p:last-child {
+  margin: 0;
+}
+
+.days .wrapper .week .weekend {
+  background: rgba(204, 51, 51, 0.6);
+}
+
+.days .wrapper .week .weekend p {
+  color: #fff;
+}
+
+/* Media Screens  */
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    max-width: 1100px;
+  }
+
+  .nav li {
+    margin-left: 15px;
+  }
+
+  .contact {
+    -webkit-box-flex: .15;
+    -ms-flex: .15;
+    flex: .15;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+    -ms-flex-line-pack: justify;
+    align-content: space-between;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 150px;
+    left: 350px;
+  }
+
+  .price_days .logo {
+    -webkit-box-flex: .13;
+    -ms-flex: .13;
+    flex: .13;
+    padding-left: 2px;
+    padding-top: 2px;
+    height: 145px;
+  }
+
+  .price_days .logo img {
+    width: 145px;
+    height: 140px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .wrapper {
+    max-width: 900px;
+  }
+
+  .nav {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+  }
+
+  .nav ul li {
+    margin-left: 10px;
+  }
+
+  .inSlider p {
+    font-size: 30px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 200px;
+    left: 320px;
+  }
+
+  .price_days .price {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+  }
+
+  .price_days .price h3 {
+    font-size: 22px;
+  }
+
+  .price_days .price p {
+    font-size: 18px;
+  }
+
+  .price_days .logo {
+    -webkit-box-flex: .13;
+    -ms-flex: .13;
+    flex: .13;
+    height: 122px;
+  }
+
+  .price_days .logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .days .wrapper .week .day {
+    width: 110px;
+    height: 110px;
+  }
+
+  .days .wrapper .week .day p {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .wrapper {
+    max-width: 800px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .wrapper .logo {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    -webkit-box-ordinal-group: 2;
+    -ms-flex-order: 1;
+    order: 1;
+  }
+
+  .wrapper .nav {
+    -webkit-box-flex: .7;
+    -ms-flex: .7;
+    flex: .7;
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%;
+    margin: 10px 0;
+    -webkit-box-ordinal-group: 4;
+    -ms-flex-order: 3;
+    order: 3;
+  }
+
+  .wrapper .contact {
+    display: none;
+  }
+
+  .inSlider p {
+    font-size: 26px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 250px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 200px;
+    left: 400px;
+  }
+
+  .price_days .price {
+    width: 100%;
+  }
+
+  .price_days .price .prices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-bottom: 1px solid #CC3333;
+    margin-top: 20px;
+  }
+
+  .price_days .price .prices p {
+    font-size: 20px;
+  }
+
+  .price_days .logo {
+    display: none;
+  }
+
+  .days .wrapper .week .day {
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+  }
+
+  .days .wrapper .week .day p {
+    font-size: 15px;
+    margin: 10px 0;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .wrapper {
+    max-width: 680px;
+  }
+
+  .nav {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column wrap;
+    flex-flow: column wrap;
+  }
+
+  .nav ul {
+    border: 1px solid #CC3333;
+  }
+
+  .nav ul li {
+    border-bottom: 1px solid #CC3333;
+    margin: 0;
+    width: 500px;
+  }
+
+  .nav ul li:hover {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  .nav ul li a {
+    padding: 10px;
+    display: block;
+  }
+
+  .nav ul li:hover a {
+    border-bottom: none;
+    font-weight: bold;
+  }
+
+  .nav label {
+    display: inline-block;
+    margin-bottom: 5px;
+  }
+
+  .nav > ul {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    -webkit-transition: max-height 500ms, opacity 1000ms;
+    transition: max-height 500ms, opacity 1000ms;
+    background: #fff;
+  }
+
+  .nav input[type="checkbox"]:checked ~ label + ul {
+    max-height: 500px;
+    opacity: 1;
+    -webkit-transition: max-height 0, opacity 300ms;
+    transition: max-height 0, opacity 300ms;
+  }
+
+  .inSlider p {
+    font-size: 20px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 100px;
+    left: 200px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 150px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 100px;
+    left: 250px;
+  }
+
+  .price_days .price .prices {
+    margin-top: 20px;
+  }
+
+  .price_days .price .prices p {
+    font-size: 16px;
+  }
+
+  .days .wrapper > h3 {
+    max-height: 65px;
+    margin-left: -25px;
+  }
+
+  .days .wrapper .week {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+
+  .days .wrapper .week .day {
+    width: 200px;
+    height: 75px;
+    border-radius: 0;
+    margin-bottom: 20px;
+  }
+
+  .days .wrapper .week .day:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .wrapper {
+    max-width: 480px;
+  }
+
+  .nav ul li {
+    width: 350px;
+  }
+
+  .inSlider p {
+    font-size: 18px;
+  }
+
+  .inSlider .firstP {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+  }
+
+  .inSlider .secondP {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+  }
+
+  .inSlider .thirdP {
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .wrapper {
+    max-width: 320px;
+  }
+
+  .nav ul li {
+    width: 300px;
+  }
+
+  .price_days .price {
+    width: 70%;
+  }
+
+  .price_days .price .prices {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+  }
+}
+@charset "UTF-8";
+
+/* --------------- reset.css --------------- */
+
+html,
+body,
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+em,
+img,
+strong,
+sub,
+sup,
+b,
+u,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+table,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  /* обнуляем отступы и убираем бордюры */
+  vertical-align: baseline;
+  /* приводим все к одной базовой линии */
+  background: transparent;
+  /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+  font-size: 14px;
+  /* размер шрифта всем одинаковый */
+}
+
+a {
+  /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  vertical-align: baseline;
+  background: transparent;
+  outline: none;
+}
+
+table {
+  /* устраняем отступы между ячейками таблицы */
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+td img {
+  vertical-align: top;
+  /* возвращаем привычное вертикальное выравнивание */
+}
+
+input,
+select,
+button,
+textarea {
+  margin: 0;
+  /* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+  font-size: 14px;
+  /* делаем размер шрифтов везде одинаковым */
+  outline: none;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+  padding: 0;
+  /* убираем внутренние отступы для текстовых полей */
+}
+
+input[type="checkbox"] {
+  /* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+  vertical-align: bottom;
+}
+
+input[type="radio"] {
+  vertical-align: text-bottom;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: smaller;
+}
+
+sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+
+html {
+  min-height: 100%;
+  /* всегда показываем вертикальную полосу прокрутки  */
+}
+
+body {
+  color: #000;
+  text-align: left;
+  font-size: 14px;
+  /* используем безопасные шрифтовые CSS стеки */
+  min-height: 100%;
+}
+
+a,
+a:visited {
+  /* порядок правил для ссылок имеет значение */
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+a:focus,
+a:active {
+  color: #000;
+  text-decoration: underline;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
+
+img {
+  max-width: 100%;
+}
+
+.clr {
+  clear: both;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+/* --------------- /базовые настройки ---------*/
+.skdslider {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  top: 0;
+  display: block;
+  overflow: hidden;
+}
+
+.skdslider .slide-navs {
+  width: 100%;
+  bottom: 10px;
+  left: 0;
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.skdslider .slide-navs li {
+  display: inline-block;
+  background: white;
+  height: 15px;
+  width: 15px;
+  margin: 0px 6px;
+  cursor: pointer;
+  position: relative;
+  border-radius: 50%;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.skdslider .slide-navs .current-slide {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.skdslider .slides {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.skdslider .slides li {
+  display: none;
+  position: relative;
+}
+
+.skdslider .slides li img {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  position: absolute;
+  -o-object-fit: cover;
+  object-fit: cover;
+  display: block;
+}
+
+@media screen and (max-width: 1200px) {
+  .skdslider {
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 1120px) {
+  .skdslider {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  .skdslider {
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .skdslider {
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .skdslider {
+    height: 250px;
+  }
+}
